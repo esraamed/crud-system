@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body >
+
+    <div class="container ">
+        <h1 class="text-center pt-5 position-relative ">Bookmarker</h1>
+        <p></p>
+        <h2 class="text-center pb-2 mb-4"><i class="fa-solid fa-bookmark icon1"></i> Bookmark your favorite sites  <i class="fa-solid fa-bookmark icon2"></i></h2>
+        <label for="name" class="pb-2 fw-bolder"><i class="fa-solid fa-book-bookmark"></i>  Site Name</label>
+        <input oninput="validationName()" id="name" type="text" placeholder="Bookmark Name" class="form-control">
+        <p class="alert alert-danger d-none" id="messagename">invalid name!!</p>
+        <label for="url" class="pb-2  pt-4 fw-bolder"><i class="fa-solid fa-link"></i>  Site URL</label>
+        <input id="url" oninput="validationurl()"  placeholder=" Website URL" class="form-control">
+        <p class="alert alert-danger d-none" id="urlname">invalid URL!!</p>
+        <button id="btnadd" onclick="addItems()" class="btn btn-danger text-white mt-4 px-5  position-relative start-50 translate-middle-x ">Submit</button>
+        <button id="btnupdate" onclick="Update()" class="btn btn-danger text-white mt-4 px-5  position-relative start-50 translate-middle-x d-none">Update</button>
+        <p></p>
+
+        <input oninput="Search()" id="search" type="search" class="form-control w-50 mx-auto" placeholder="Search By Name...">
+        <table class="table mt-5 text-center">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </thead>
+            <tbody id="data">
+               
+            </tbody>
+        </table>
+
+    </div>
+ <script src="js/index.js"></script>   
+</body>
+</html>
